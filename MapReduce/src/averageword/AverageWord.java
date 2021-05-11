@@ -17,7 +17,7 @@ public class AverageWord {
 	public static void main(String[] args) throws Exception {
 		
 		if(args.length != 2) {
-			System.out.printf("Usage: WordCount <input dir> <output div>\n");
+			System.out.printf("Usage: AvgWordLength <input dir> <output div>\n");
 			System.exit(-1);
 		}
 		
@@ -25,7 +25,7 @@ public class AverageWord {
 		
 		job.setJarByClass(AverageWord.class);
 		
-		job.setJobName("Word Count");
+		job.setJobName("AverageWord Count");
 		
 		FileInputFormat.setInputPaths(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
