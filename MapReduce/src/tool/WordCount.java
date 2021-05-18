@@ -16,6 +16,7 @@ public class WordCount extends Configured implements Tool {
 	public static void main(String[] args) throws Exception {
 
 		Configuration conf = new Configuration();
+		conf.setBoolean("caseSensitive", false);
 
 		int exitCode = ToolRunner.run(conf, new WordCount(), args);
 		System.exit(exitCode);
